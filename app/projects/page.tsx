@@ -6,20 +6,16 @@ import { Article } from "./article";
 import { Eye } from "lucide-react";
 import { projects } from "../data/projects";
 
-
 export default function ProjectsPage() {
-  const featured = projects.find((p) => p.slug === "croppdf");
+  const featured = projects.find((p) => p.slug === "croppdf")!;
   const top2 = projects.find((p) => p.slug === "currency");
   const top3 = projects.find((p) => p.slug === "weather-project");
 
   const sorted = projects
-    .filter(
-      (p) => ![featured.slug, top2?.slug, top3?.slug].includes(p.slug)
-    )
+    .filter((p) => ![featured.slug, top2?.slug, top3?.slug].includes(p.slug))
     .sort(
       (a, b) =>
-        new Date(b.date ?? 0).getTime() -
-        new Date(a.date ?? 0).getTime()
+        new Date(b.date ?? 0).getTime() - new Date(a.date ?? 0).getTime()
     );
 
   return (
