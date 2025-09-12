@@ -69,11 +69,13 @@ export default function ProjectsPage() {
 
           {/* Top 2 + Top 3 */}
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].filter(Boolean).map((project) => (
-              <Card key={project!.slug}>
-                <Article project={project!} views={project!.views} />
-              </Card>
-            ))}
+            {[top2, top3]
+              .filter((p): p is (typeof projects)[number] => Boolean(p))
+              .map((project) => (
+                <Card key={project.slug}>
+                  <Article project={project} views={project.views} />
+                </Card>
+              ))}
           </div>
         </div>
 
