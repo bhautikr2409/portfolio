@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     slug: "currency",
-    title: "currencyreact converter",
+    title: "Currencyreact Converter",
     description: "A realtime multiplayer app for creative collaboration.",
     date: "2023-03-10T00:00:00.000Z",
     url: "https://currencyreact.netlify.app/",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     slug: "weather-project",
-    title: "weather Project",
+    title: "Weather Project",
     description: "This is another side project example.",
     date: "2022-12-20T00:00:00.000Z",
     url: "https://weatherpracticeclone.netlify.app/",
